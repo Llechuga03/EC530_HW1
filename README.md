@@ -1,7 +1,7 @@
 # EC530_HW1
 Objective for the Assignment:  If the user gives you two arrays of geo location, match each point in the first array to the closest one in the second array. 
 Code is written in C++ and uses the Haversine Formula as the method for finding shortest distance between two GPS points. The equation is provided below as
-well as in the .c file itself. 
+well as in the .cpp file itself. 
 
 Haversine Formula: d = 2R * arcsin(sqrt(sin²(Δφ/2) + cos(φ1) * cos(φ2) * sin²(Δλ/2)))
 
@@ -14,4 +14,4 @@ R: Earth's radius (approximately 6,371 km)
 
 This code is also meant to use distances measured in km.
 
-All work done by Logan Lechuga.
+For this assignment, I collaborated with Angel Amaya in brainstorming how to approach the problem and what data structures to use. We discussed KD trees, but that was a bit confusing for me so I used a simpler approach that seemed more intuitive to me, even though the performance with the KD tree is much better.
