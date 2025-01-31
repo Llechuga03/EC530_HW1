@@ -1,13 +1,12 @@
 import os
 import logging
 from parse_csv import parse_CSV
-from parse_manual import parse_manual_input
 from find_closest import find_closest_points
+from dms_conversion import dms_to_decimal
 
 
-#Main function which serves as the hub for the user and functionality with the rest of the code
+#Main function which serves as the hub for the user and functionality of the rest of the code
 def main():
-    #Prompting the user on what type of input format they want to use
     print("How would you like to input your data?")
     print("1. CSV File")
     print("2. Manual Input - Decimal Degrees")
@@ -51,14 +50,14 @@ def main():
         for _ in range(num_points_A):
             lat = input("Enter latitude (DMS format): ").strip()
             lon = input("Enter latitude (DMS format): ").strip()
-            pointsA.append((parse_manual_input(lat),parse_manual_input(lon)))
+            pointsA.append((dms_to_decimal(lat), dms_to_decimal(lon)))
         
         num_points_B = int(input("Enter number of points in B: "))
         pointsB = []
         for _ in range(num_points_B):
             lat = input("Enter latitude (DMS format): ").strip()
             lon = input("Enter latitude (DMS format): ").strip()
-            pointsB.append((parse_manual_input(lat),parse_manual_input(lon)))
+            pointsB.append((dms_to_decimal(lat), dms_to_decimal(lon)))
     
     else:
         print("ERROR: Invalid option. Please restart and select a valid option.")
